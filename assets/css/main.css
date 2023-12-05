@@ -95,7 +95,9 @@ video {
 	font: inherit;
 	vertical-align: baseline;
 }
-
+h1,h2{
+	text-align: center;
+}
 .oscuro {
 	background-color: #212121a8;
 	padding-left: 3%;
@@ -2686,6 +2688,17 @@ input[type="radio"]+label:before {
 }
 
 /* Image */
+.container{
+	display: flex;
+	justify-content: center;
+}
+.container img {
+	text-align: center;
+	border-radius: 50%;
+	width: 30%;
+	box-shadow: #fff 3px 2px 30px;
+	margin-bottom: 20px;
+}
 
 .image {
 	border-radius: 0.25em;
