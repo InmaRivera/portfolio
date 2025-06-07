@@ -1,0 +1,103 @@
+<!DOCTYPE HTML>
+<!--
+	Hyperspace by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+
+<head>
+    <title>Portfolio - descripción Análisis Estático</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript>
+        <link rel="stylesheet" href="assets/css/noscript.css" />
+    </noscript>
+</head>
+
+<body class="is-preload">
+
+    <!-- Header -->
+    <header id="header">
+        <a href="index.html" class="title">Inicio</a>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="analisismobsf.html" class="active">Análisis Estático MobSF</a></li>
+                <!-- <li><a href="elements.html">Elements</a></li> -->
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Wrapper -->
+    <div id="wrapper">
+
+        <!-- Main -->
+        <section id="main" class="wrapper">
+            <div class="inner">
+                <h1 class="major">Análisis Estático MobSF</h1>
+                <div style="text-align: center;">
+                <span class=""><img src="images/mobsf.jpeg" style="width: 70%; height: auto;" alt="Captura Resultados"/></span>
+                </div><br>
+                <h2>Análisis Estático en App de WhatsApp</h2><br>
+                <p><b>Descripción del análisis:</b><br>
+
+                    <b>🔍 Análisis estático de seguridad con MobSF 🔐</b><br>
+                    Como parte de mi formación continua en ciberseguridad, realicé un análisis estático de la app de WhatsApp (APK versión 5.0+) utilizando Mobile Security Framework (MobSF).<br>
+                    ¿Cómo lo hice?<br>
+                    Instalé y configuré MobSF en local<br>
+                    Descargué y Subí la APK de WhatsApp para escanearla estáticamente en MobSF<br>
+                    Analicé permisos, componentes y uso de cifrado<br>
+                    Hallazgos principales<br>
+                    La app contiene:<br>
+                     <b>• 579 actividades → 25 accesibles<br>
+                     • 43 servicios → 8 activos<br>
+                     • 53 receivers → 14 activos<br>
+                     • 10 content providers → 4 accesibles<br>
+                    84 permisos solicitados, de los cuales 30 son clasificados como peligrosos, ya que podrían usarse con fines maliciosos si un atacante compromete el dispositivo.<br></b>
+                    Vulnerabilidades críticas detectadas (análisis de código):<br>
+                    Uso de AES/CBC con PKCS5/7 padding<br>
+                    Vulnerable a ataques Padding Oracle<br>
+                    Riesgo de descifrado sin clave con mensajes manipulados<br>
+                    Uso de AES en modo ECB por defecto<br>
+                    Patrón predecible en bloques de datos<br>
+                    Riesgo de análisis de frecuencia y fuga de información<br>
+                    Estas vulnerabilidades están referenciadas en:<br>
+                    CWE-327: Uso de algoritmos criptográficos débiles<br>
+                    OWASP Top 10 (M5): Criptografía insuficiente<br>
+                    OWASP MASVS (MSTG-CRYPTO-2): No cumplimiento de estándares móviles<br>
+                    
+                    Conclusión<br>
+                     WhatsApp es una app legítima, pero el exceso de permisos y el mal uso del cifrado podrían representar una amenaza si un atacante logra acceso al dispositivo. Esto resalta la importancia de asegurar el canal de cifrado y limitar los permisos innecesarios en cualquier aplicación móvil.<br>
+                    
+                   <b>📌 Nota importante<br></b> 
+                    Estas vulnerabilidades han sido parcial o totalmente corregidas en versiones posteriores de la app, gracias a parches de seguridad y mejoras continuas por parte del equipo de desarrollo de WhatsApp. Este análisis destaca la importancia de mantener las aplicaciones actualizadas y de seguir buenas prácticas desde el diseño.<br>
+                    </p>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Footer -->
+    <footer id="footer" class="wrapper alt">
+        <div class="inner">
+            <ul class="menu">
+                <li>&copy; Untitled. All rights reserved.</li>
+                <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
