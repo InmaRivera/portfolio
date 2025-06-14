@@ -30,7 +30,13 @@
 
 ## Cómo ejecutarlo localmente 🚀 
 
-```bash
-git clone https://github.com/InmaRivera/portfolio.git
-cd portfolio
+## Cómo ejecutarlo localmente 🚀 
+
+## Instalación
+1. Clona el repositorio:
+   ```bash
+    git clone  https://github.com/InmaRivera/portfolio.git
+2. Una vez clonado en la terminal ejecuta:
+    ```bash
+    cd portfolio 
 # Abre el archivo index.html en tu navegador
