@@ -1,4 +1,4 @@
-# 💼 Mi Portfolio Web
+# Mi Portfolio Web 💼 
 
 ¡Hola! 👋 Soy Inmaculada, desarrollada web con especialización en Ciberseguridad. Este es mi portfolio personal, donde muestro algunos de mis proyectos, habilidades y formas de contacto.
 
@@ -7,7 +7,7 @@
 
 ---
 
-## ✨ ¿Qué encontrarás?
+## ¿Qué encontrarás? ✨
 
 - Proyectos destacados con capturas y descripciones.
 - Tecnologías que uso para Ciberseguridad: Volatility, herramientas SIEM, Autopsy, FTK Imager, Foremost, Metasploit, SQLCipher, ADB, Snort, Kibana, MobSF, entre otras.
@@ -17,7 +17,7 @@
 
 ---
 
-## 🛠️ Tecnologías principales usadas para web
+## Tecnologías principales usadas para web 🛠️ 
 
 - Java EE
 - Aplicación MVC
@@ -28,7 +28,7 @@
 
 ---
 
-## 🚀 Cómo ejecutarlo localmente
+## Cómo ejecutarlo localmente 🚀 
 
 ```bash
 git clone https://github.com/InmaRivera/portfolio.git
