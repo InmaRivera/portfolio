@@ -30,8 +30,6 @@
 
 ## Cómo ejecutarlo localmente 🚀 
 
-## Cómo ejecutarlo localmente 🚀 
-
 ## Instalación
 1. Clona el repositorio:
    ```bash
