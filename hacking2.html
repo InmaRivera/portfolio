@@ -1,0 +1,123 @@
+<!DOCTYPE HTML>
+<!--
+	Hyperspace by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+
+<head>
+    <title>Portfolio - descripción Reconocimiento y Explotación</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript>
+        <link rel="stylesheet" href="assets/css/noscript.css" />
+    </noscript>
+</head>
+
+<body class="is-preload">
+
+    <!-- Header -->
+    <header id="header">
+        <a href="index.html" class="title">Inicio</a>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="hacking2.html" class="active">Hacking Ético Parte 2</a></li>
+                <!-- <li><a href="elements.html">Elements</a></li> -->
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Wrapper -->
+    <div id="wrapper">
+
+        <!-- Main -->
+        <section id="main" class="wrapper">
+            <div class="inner">
+                <h1 class="major">Post-Explotación con Kali Linux y Metasploitable3</h1>
+                <div style="text-align: center;">
+                <span class="image fit"><img src="images/multihanlder2.png"  alt="Captura Resultados"/></span>
+                </div><br>
+                <h2></h2><br>
+        <h2>🛡️ Hacking Ético – Parte 2: Post-Explotación con Kali Linux y Metasploitable3</h2><br>
+        <p> En esta segunda parte de mi laboratorio de hacking ético, exploré una fase clave en cualquier ataque realista: la
+            post-explotación. Después de comprometer una máquina víctima (en este caso, Metasploitable3), el siguiente paso fue
+            asegurar el acceso persistente a esa máquina incluso después de reinicios.<br>
+           <h3> 🔁 ¿Qué significa crear persistencia?</h3>
+        
+            Es el proceso por el cual un atacante garantiza que su acceso no se pierda, incluso si la máquina comprometida se<br>
+            apaga o reinicia. En este ejercicio, simulé este comportamiento de forma controlada y educativa para comprender mejor cómo
+            funciona en un entorno real.<br>
+            <b>Herramientas utilizadas:<br>
+        
+            Kali Linux (máquina atacante)<br>
+        
+            Metasploit Framework<br>
+        
+            Multihandler (para mantener escucha activa)<br>
+        
+            Sesión Meterpreter ya obtenida en la parte 1<br>
+        
+            🧪 Paso a paso (resumido y responsable):<br>
+        
+            Levantamos un servidor C2 (Command & Control) con multi/handler, configurando la misma IP, puerto y payload
+            utilizados durante la explotación inicial.<br>
+        
+            Lo ejecutamos en segundo plano con el comando:</b><br>
+        
+           <b>exploit -j<br>
+        
+            Esto deja el listener activo esperando reconexiones automáticas.<br>
+        
+            Desde la sesión meterpreter activa, usamos un módulo de persistencia, configurando:<br>
+        
+            IP y puerto del servidor C2<br>
+        
+            Sesión activa de Meterpreter<br></b> 
+        
+            Al ejecutar la persistencia, se crea un archivo .exe en la máquina víctima que garantiza que, al reiniciarse, la
+            víctima se conectará automáticamente al servidor del atacante, recuperando el acceso sin repetir el proceso desde
+            cero.<br>
+           <b>⚠️ Importante</b> <br>
+            
+            Este ejercicio fue realizado en un entorno de laboratorio controlado, con máquinas diseñadas para prácticas de seguridad
+            ofensiva. El objetivo es comprender cómo funciona la post-explotación para defender mejor los sistemas reales.<br>
+            
+            🔐 Conocer cómo los atacantes mantienen el acceso nos ayuda a saber qué rastrear, detectar y bloquear desde el lado
+            defensivo.<br>
+        </p><br>
+
+   <p></p>
+        	
+							<a href="index.html" class="button">Volver al Inicio</a>
+  </p>
+   
+        </div>
+        </section>
+
+    </div>
+
+    <!-- Footer -->
+    <footer id="footer" class="wrapper alt">
+        <div class="inner">
+            <ul class="menu">
+                <li>&copy; Untitled. All rights reserved.</li>
+                <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
